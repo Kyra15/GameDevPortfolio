@@ -45,8 +45,8 @@ export class Game extends Phaser.Scene
         bg.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         bg.z = -100
 
-        this.playerStart = { x: 0, y: 500 };
-        this.meStart = { x: 324, y: 480 };
+        this.playerStart = { x: 0, y: 484 };
+        this.meStart = { x: 324, y: 456 };
     }
 
     initGameUi ()
@@ -112,17 +112,17 @@ export class Game extends Phaser.Scene
 
     initPosterSprites ()
     {
-        this.nolb = this.physics.add.staticImage(520, 328, 'nolb');
+        this.nolb = this.physics.add.staticImage(520, 304, 'nolb');
         this.nolb.scale = 4;
         this.nolb.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         this.nolb.refreshBody();
 
-        this.paddle = this.physics.add.staticImage(736, 328, 'paddle');
+        this.paddle = this.physics.add.staticImage(736, 304, 'paddle');
         this.paddle.scale = 4;
         this.paddle.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         this.paddle.refreshBody();
 
-        this.combo = this.physics.add.staticImage(952, 328, 'combo');
+        this.combo = this.physics.add.staticImage(952, 304, 'combo');
         this.combo.scale = 4;
         this.combo.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         this.combo.refreshBody();
@@ -187,6 +187,7 @@ export class Game extends Phaser.Scene
             // show the new one
             if (nearest) {
                 nearest.indicator.setVisible(true);
+                nearest.indicator.startPulse()
             }
             this.activeTarget = nearest;
         }

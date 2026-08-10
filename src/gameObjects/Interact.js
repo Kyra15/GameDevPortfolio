@@ -22,7 +22,7 @@ export default class Indicator extends Phaser.GameObjects.Sprite
         this.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         this.pulseTween = this.scene.tweens.add({
             targets: this,
-            y: { from: og_y - 8, to: og_y + 8 },
+            y: { from: og_y, to: og_y - 8 },
             alpha: { from: 1, to: 0.6 },
             duration: 600,
             yoyo: true,
