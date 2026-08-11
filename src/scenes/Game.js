@@ -241,13 +241,7 @@ export class Game extends Phaser.Scene
         this.tutorialText.setVisible(false);
         this.tutorialRect.setVisible(false);
 
-        this.bgIntro.play();
-        const durationMs = (this.bgIntro.duration - 0.02) * 1000;
-        const safeDelay = Math.max(0, durationMs);
-
-        this.time.delayedCall(safeDelay, () => {
-            this.bgMusic.play({ loop: true });
-        });
+        this.bgMusic.play({ loop: true });
     }
 
     GameOver ()

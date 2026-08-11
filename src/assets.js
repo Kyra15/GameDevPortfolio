@@ -3,11 +3,7 @@ export default {
         bgaudio: {
             key: 'bgaudio',
             args: ['assets/audio/nationalCityLoop.mp3']
-        },
-        bgintro: {
-            key: 'bgintro',
-            args: ['assets/audio/nationalCityIntro.mp3']
-        },
+        }
     },
     'image': {
         indicator: {
