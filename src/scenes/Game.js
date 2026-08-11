@@ -25,7 +25,6 @@ export class Game extends Phaser.Scene
         this.initIndicators();
 
         this.dialogData = this.cache.json.get('dialogData');
-        this.bgIntro = this.sound.add(ASSETS.audio.bgintro.key);
         this.bgMusic = this.sound.add(ASSETS.audio.bgaudio.key);
     }
 
