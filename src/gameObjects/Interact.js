@@ -10,6 +10,7 @@ export default class Indicator extends Phaser.GameObjects.Sprite
         this.scene = scene;
 
         this.scale = 4;
+        this.baseY = y;
         this.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
 
         // this.startPulse();
@@ -17,17 +18,16 @@ export default class Indicator extends Phaser.GameObjects.Sprite
     }
 
     startPulse() {
-        let og_y = this.y
         this.scale = 4;
         this.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
         this.pulseTween = this.scene.tweens.add({
             targets: this,
-            y: { from: og_y, to: og_y - 8 },
+            y: { from: this.baseY, to: this.baseY - 8 },
             alpha: { from: 1, to: 0.6 },
             duration: 600,
             yoyo: true,
             repeat: -1,
-            ease: 'Sine.easeInOut'
+            ease: 'Sin.easeInOut'
         });
     }
 
@@ -35,6 +35,7 @@ export default class Indicator extends Phaser.GameObjects.Sprite
         if (this.pulseTween) {
             this.pulseTween.stop();
             this.setScale(1).setAlpha(1);
+            this.y = this.baseY;
         }
     }
 

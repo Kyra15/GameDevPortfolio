@@ -14,7 +14,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
         this.setCollideWorldBounds(true);
         this.setDepth(100);
         this.scene = scene;
-        this.speed = 350 ; 
+        this.speed = 260 ; 
 
         this.anims.play(ANIMATION.astro.idle.key, true);
         this.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);

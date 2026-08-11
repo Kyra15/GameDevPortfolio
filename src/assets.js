@@ -1,10 +1,14 @@
 export default {
-    // 'audio': {
-    //     score: {
-    //         key: 'sound',
-    //         args: ['assets/sound.mp3', 'assets/sound.m4a', 'assets/sound.ogg']
-    //     },
-    // },
+    'audio': {
+        bgaudio: {
+            key: 'bgaudio',
+            args: ['assets/audio/nationalCityLoop.mp3']
+        },
+        bgintro: {
+            key: 'bgintro',
+            args: ['assets/audio/nationalCityIntro.mp3']
+        },
+    },
     'image': {
         indicator: {
             key: 'indicatorIcon',

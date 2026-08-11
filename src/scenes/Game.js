@@ -25,6 +25,8 @@ export class Game extends Phaser.Scene
         this.initIndicators();
 
         this.dialogData = this.cache.json.get('dialogData');
+        this.bgIntro = this.sound.add(ASSETS.audio.bgintro.key);
+        this.bgMusic = this.sound.add(ASSETS.audio.bgaudio.key);
     }
 
     update (time, delta) {
@@ -147,7 +149,7 @@ export class Game extends Phaser.Scene
     }
 
     initIndicators ()
-    {
+    {   
 
         this.nolb.indicator = new Indicator(this, this.nolb.x, this.nolb.y - 144, 'indicatorIcon');
         this.paddle.indicator = new Indicator(this, this.paddle.x, this.paddle.y - 144, 'indicatorIcon');
@@ -198,9 +200,9 @@ export class Game extends Phaser.Scene
         if (!this.activeTarget) return;
 
         switch (this.activeTarget) {
-            case this.nolb: this.enterGame('nolb'); break;
-            case this.paddle: this.enterGame('paddle'); break;
-            case this.combo: this.enterGame('combo'); break;
+            case this.nolb: this.enterGame('games/nolb/index.html'); break;
+            case this.paddle: this.enterGame('games/paddlemania/index.html'); break;
+            case this.combo: this.enterGame('games/combo/index.html'); break;
             case this.me: this.showDialog(); break;
         }
     }
@@ -214,8 +216,23 @@ export class Game extends Phaser.Scene
         })
     }
 
-    enterGame(name) {
-        console.log("entering" + name)
+    enterGame(path) {
+
+        if (path.includes("combo")) {
+            document.getElementById('game-frame').src = "https://kyra15.github.io/Combo/"
+        } else {
+            document.getElementById('game-frame').src = path;
+            this.bgMusic.pause()
+        }
+        document.getElementById('game-modal').style.display = 'flex';
+        this.scene.pause('Game');
+
+        document.getElementById('close-btn').addEventListener('click', () => {
+            document.getElementById('game-frame').src = ''; // unload it, frees memory
+            document.getElementById('game-modal').style.display = 'none';
+            this.scene.resume('Game');
+            this.bgMusic.resume()
+        });
     }
 
     startGame ()
@@ -223,6 +240,14 @@ export class Game extends Phaser.Scene
         this.gameStarted = true;
         this.tutorialText.setVisible(false);
         this.tutorialRect.setVisible(false);
+
+        this.bgIntro.play();
+        const durationMs = (this.bgIntro.duration - 0.05) * 1000;
+        const safeDelay = Math.max(0, durationMs);
+
+        this.time.delayedCall(safeDelay, () => {
+            this.bgMusic.play({ loop: true });
+        });
     }
 
     GameOver ()
