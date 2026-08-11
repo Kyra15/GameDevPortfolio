@@ -12,10 +12,10 @@
                 "text": "Who are you?",
                 "lines": [
                     "I'm Kyra, a current high school senior in Florida!",
-                    "My focus is in computer science/astrophysics (specializing in AI), and my dream job is to work at NASA or JPL.",
-                    "I'm big in STEM competitions (science olympiad, math competition, etc.) and I love coaching/teaching kids science as well.",
-                    "Game development is a little hobby I've picked up, as it was what got me into programming as a kid.",
-                    "My current engine is Godot (although this was made in Phaser.js), but I know a ton of other languages as well, my main one being Python.",
+                    "My focus is in computer science/astrophysics (specializing in AI), and my dream job is to work at NASA or JPL",
+                    "I'm big in STEM competitions (science olympiad, math competition, etc.) and I love coaching/teaching kids science as well",
+                    "Game development is a little hobby I've picked up, as it was what got me into programming as a kid",
+                    "My current engine is Godot (although this was made in Phaser.js), but I know a ton of other languages as well, my main one being Python",
                     "Besides game dev, here a few of my other favorite things:",
                     "Playing piano - favorites are Rachmanioff and Debussy",
                     "Watching movies - favorites are Everything Everywhere all at Once and Project Hail Mary",
@@ -27,10 +27,19 @@
                 "text": "What is this?",
                 "lines": [
                     "This is my game development portfolio!",
-                    "I made it in about 3 days to showcase some of the stuff I've been working on in an engaging way.",
-                    "Press space to go through dialogue, arrow keys to move, and E to interact with objects.",
-                    "All sprites, animations, and programs were done by me.",
+                    "I made it in about 2 days to showcase some of the stuff I've been working on in an engaging way",
+                    "Press space to go through dialogue, arrow keys to move, and E to interact with objects",
+                    "All sprites, animations, and programs were done by me",
                     "The music is from National City in Pokemon Heart Gold and Soul Silver (i'm currently on Pokemon Black and White, but this one is next on my list!)",
+                    "Any other questions?"
+                ]
+            },
+            {
+                "text": "You're so cool, where can I see more about you?",
+                "lines": [
+                    "Aw thanks!",
+                    "You can find my education and professional experience on Linkedin @ Kyra Movva",
+                    "Or you can see what my latest computer science projects are on Github @ Kyra15",
                     "Any other questions?"
                 ]
             },
@@ -38,10 +47,10 @@
                 "text": "What's that game? (Game #1: No One Left Behind)",
                 "lines": [
                     "No One Left Behind is a game I made as part of my school's game jam!",
-                    "It was technically a week-long, but my friend and I forgot so we made this one is about 48 hours.",
+                    "It was technically a week-long, but my friend and I forgot so we made this one is about 48 hours",
                     "It's a platformer where you're in the apocalypse and you have to help out your friends before you catch a deadly virus!",
-                    "My friend collected all of the art, sound effects, and music, while I did all of the programming.",
-                    "Fun fact: when I was younger, my dad told me that every good game developer has a secret code to automatically win their own game, so there's some sequence of keys that lets you skip straight to the end in this ;)",
+                    "My friend collected all of the art, sound effects, and music, while I did all of the programming",
+                    "Fun fact: when I was younger, my dad told me that every good game developer has a secret code, so there's a sequence of keys that lets you skip straight to the end in this ;)",
                     "Try it out!",
                     "Any other questions?"
                 ]
@@ -50,9 +59,9 @@
                 "text": "What's that game? (Game #2: Paddlemania)",
                 "lines": [
                     "Paddlemania is the very first game I completed and put onto itch.io",
-                    "It was made for my school's Computer Science Fair in 2023.",
-                    "It's an endless racer where you play as a kayak and must collect money while avoiding buoys and seagulls.",
-                    "I created all of the art and programming, then collected the sound effects and music.",
+                    "It was made for my school's Computer Science Fair in 2023",
+                    "It's an endless racer where you play as a kayak and must collect money while avoiding buoys and seagulls",
+                    "I created all of the art and programming, then collected the sound effects and music",
                     "Fun fact: I made this game because my nickname used to be Kayak :p",
                     "Give it a whirl!", 
                     "Any other questions?"
@@ -62,11 +71,11 @@
                 "text": "What's that game? (Game #3: Combo)",
                 "lines": [
                     "Combo is an online version of my favorite card game.",
-                    "The aim of the game is to have the lowest value of cards, but there's a catch",
+                    "The aim of the game is to have the lowest value of cards, but there's a catch...",
                     "You can't look at your cards!",
-                    "It's a really fun logic game, even if it take a bit to understand at first.",
-                    "I did all of the art and programming in HTML, Javascript, and CSS. The multiplayer aspect is handled by a Firebase server.",
-                    "Fun fact: I created this because my friends and I would play this every day at lunch, and summer break kinda interrupted that :D",
+                    "It's a really fun logic game, even if it takes a bit to understand it at first",
+                    "I did all of the art and programming in HTML, Javascript, and CSS. The multiplayer aspect is done with a Firebase server",
+                    "Fun fact: I created this because my friends and I would play this every day at lunch, and summer break kinda interrupted that, but now we can play online :D",
                     "Check it out!",
                     "Any other questions?"
                 ]
