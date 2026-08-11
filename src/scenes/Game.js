@@ -242,7 +242,7 @@ export class Game extends Phaser.Scene
         this.tutorialRect.setVisible(false);
 
         this.bgIntro.play();
-        const durationMs = (this.bgIntro.duration - 0.1) * 1000;
+        const durationMs = (this.bgIntro.duration - 0.02) * 1000;
         const safeDelay = Math.max(0, durationMs);
 
         this.time.delayedCall(safeDelay, () => {
