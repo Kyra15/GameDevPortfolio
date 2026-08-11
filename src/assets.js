@@ -12,6 +12,13 @@ export default {
                 frameWidth: 18,
                 frameHeight: 17
             }]
+        },
+        dialogImg: {
+            key: 'dialogImg',
+            args: ['assets/dialog.png', {
+                frameWidth: 48,
+                frameHeight: 48
+            }]
         }
     },
     'spritesheet': {

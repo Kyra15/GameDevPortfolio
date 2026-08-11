@@ -1,5 +1,5 @@
 export class DialogScene extends Phaser.Scene {
-    
+
     constructor() {
 
         super('DialogScene');
@@ -21,7 +21,7 @@ export class DialogScene extends Phaser.Scene {
         this.boxWidth = 1100;
         this.baseBoxHeight = 160;
         this.boxX = (1280 - this.boxWidth)/2;
-        this.boxBottomY = 540 + this.baseBoxHeight;
+        this.boxBottomY = 546 + this.baseBoxHeight;
 
         this.boxState = { height: 4 };
 
@@ -36,10 +36,10 @@ export class DialogScene extends Phaser.Scene {
     drawBox(height) {
         const topY = this.boxBottomY - height;
         this.rect.clear();
-        this.rect.fillStyle(0x000000, 0.7);
-        this.rect.lineStyle(4, 0xffffff, 1);
+        this.rect.fillStyle(0x000000, 1);
+        this.rect.lineStyle(4, 0x6691ed, 1);
         this.rect.fillRect(this.boxX, topY, this.boxWidth, height);
-        // this.rect.strokeRect(this.boxX, topY, this.boxWidth, height);
+        this.rect.strokeRect(this.boxX, topY, this.boxWidth, height);
 
         if (this.speakerName) {
             this.speakerName.setY(topY + 2);
@@ -198,6 +198,11 @@ export class DialogScene extends Phaser.Scene {
             wordWrap: { width: this.boxWidth - 240 - 40 }
         }).setResolution(2).setAlpha(0);
 
+        this.dialogImage = this.add.image(this.boxX + 112, this.getBoxTopY() - 94, 'dialogImg').setAlpha(0);
+        this.dialogImage.scale = 4;
+        this.dialogImage.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
+
+
         this.tweens.add({
             targets: this.boxState,
             height: this.baseBoxHeight,
@@ -209,6 +214,7 @@ export class DialogScene extends Phaser.Scene {
             onComplete: () => {
                 this.speakerName.setAlpha(1);
                 this.dialogText.setAlpha(1);
+                this.dialogImage.setAlpha(1);
                 this.typewriteText(this.lines[this.lineIndex]);
                 this.input.keyboard.on('keydown-SPACE', this.handleSpace, this);
             }
@@ -220,6 +226,7 @@ export class DialogScene extends Phaser.Scene {
         this.clearOptions();
         this.speakerName.setAlpha(0);
         this.dialogText.setAlpha(0);
+        this.dialogImage.setAlpha(0);
         this.tweens.add({
             targets: this.boxState,
             height: 4,
